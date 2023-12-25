@@ -31,6 +31,12 @@ function App() {
     }
 
     function deleteAllPlans() {
+        const sure = window.confirm(
+            "Are you sure you want to delete all plans?"
+        );
+        if (!sure) {
+            return;
+        }
         localStorage.removeItem("Plans");
         setAllPlans([]);
     }
