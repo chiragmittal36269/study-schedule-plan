@@ -7,16 +7,10 @@
     font-family: "Roboto", sans-serif;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
 #root {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 .app {
@@ -27,40 +21,37 @@ body {
 
 .app h1 {
     text-align: center;
-    width: 100%;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: tomato;
     color: yellow;
-    font-family: cursive;
-    font-size: 1.8rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
+    font-family: cursive;
+    font-size: 1.8rem;
 }
 
-.app .createPlan {
+.createPlan {
     width: 100%;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    height: 170px;
+    flex-direction: column;
 }
 
 .app .createPlan form {
     width: 100%;
+    max-width: 700px;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    gap: 20px;
-    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 .app .createPlan form .subject input[type="text"] {
@@ -149,11 +140,18 @@ body {
     max-width: 575px;
 }
 
+.showPlan .plan .info {
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .showPlan .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    gap: 10px;
 }
 
 .showPlan .buttons button {
@@ -169,4 +167,15 @@ body {
     border: 1px solid yellow;
     color: tomato;
     font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+    .showPlan .plan {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .showPlan .buttons {
+        gap: 20px;
+    }
 }

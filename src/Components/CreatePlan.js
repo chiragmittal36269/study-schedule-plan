@@ -32,7 +32,6 @@ function CreatePlan({ allPlans, setAllPlans }) {
             subject: "",
             hours: "",
         });
-        alert("Plan added successfully");
     }
 
     return (

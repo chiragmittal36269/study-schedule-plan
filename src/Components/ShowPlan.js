@@ -6,8 +6,10 @@ function ShowPlan({ allPlans, setAllPlans, deletePlan, changeHour }) {
         <div className="showPlan">
             {allPlans.map((plan, index) => (
                 <div key={index} className="plan">
-                    <h3>{plan.subject}</h3>
-                    <h3>{plan.hours}hours</h3>
+                    <div className="info">
+                        <h3>{plan.subject}</h3>
+                        <h3>{plan.hours}hours</h3>
+                    </div>
 
                     <div className="buttons">
                         <button
