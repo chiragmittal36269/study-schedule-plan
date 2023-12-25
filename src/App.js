@@ -19,10 +19,9 @@ function App() {
         setAllPlans([...allPlans]);
     }
 
-    function changeHour(e, plan) {
+    function changeHour(value, plan) {
         let index = allPlans.indexOf(plan);
-        console.log("hello", e.target);
-        if (e.target.className === "inc") {
+        if (value === "inc") {
             allPlans[index].hours++;
         } else {
             allPlans[index].hours--;
@@ -37,18 +36,29 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="app">
+            <h1>Study Schedule Plan</h1>
+
             <CreatePlan setAllPlans={setAllPlans} allPlans={allPlans} />
+
             {allPlans.length === 0 ? (
-                <div>Please Enter A Plan</div>
+                <h3 className="noPlan">Please Enter A Plan</h3>
             ) : (
                 <ShowPlan
                     setAllPlans={setAllPlans}
                     allPlans={allPlans}
                     deletePlan={deletePlan}
                     changeHour={changeHour}
-                    deleteAllPlans={deleteAllPlans}
                 />
+            )}
+            {allPlans.length !== 0 ? (
+                <div className="deleteAll">
+                    <button onClick={deleteAllPlans} className="deleteAllBtn">
+                        Delete All Plans
+                    </button>
+                </div>
+            ) : (
+                ""
             )}
         </div>
     );

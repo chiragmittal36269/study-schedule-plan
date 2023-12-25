@@ -6,3 +6,167 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.app h1 {
+    text-align: center;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: tomato;
+    color: yellow;
+    font-family: cursive;
+    font-size: 1.8rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.app .createPlan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    height: 170px;
+}
+
+.app .createPlan form {
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.app .createPlan form .subject input[type="text"] {
+    width: 160px;
+    height: 30px;
+    padding-left: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid tomato;
+}
+
+.app .createPlan form .hours input[type="number"] {
+    width: 160px;
+    height: 30px;
+    padding-left: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid tomato;
+}
+
+.app .createPlan form .btn {
+    padding: 5px 20px;
+    background-color: yellow;
+    outline-color: yellow;
+    border: 2px solid tomato;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, tomato 4px 4px 0 1px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.app .createPlan form .btn:active {
+    box-shadow: #fff 2px 2px 0 0, rgb(187, 105, 5) 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+.noPlan {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: yellow;
+    background: tomato;
+}
+
+.deleteAll {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteAll .deleteAllBtn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    background: yellow;
+    color: tomato;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.showPlan {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.showPlan .plan {
+    width: 100%;
+    /* height: 70px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px 0 #0000009f, inset 1px 1px 5px 0 #00000063;
+    border-radius: 5px;
+    max-width: 575px;
+}
+
+.showPlan .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.showPlan .buttons button {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid yellow;
+    color: tomato;
+    font-weight: 700;
+}

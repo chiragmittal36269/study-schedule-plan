@@ -36,14 +36,14 @@ function CreatePlan({ allPlans, setAllPlans }) {
     }
 
     return (
-        <div>
+        <div className="createPlan">
             <form action="" onSubmit={handleSubmit}>
                 <div className="subject">
-                    <label htmlFor="">Name of the Subject: </label>
+                    {/* <label htmlFor="">Name of the Subject: </label> */}
                     <input
                         type="text"
                         name="subject"
-                        placeholder="please enter the subject name"
+                        placeholder="Enter the Subject"
                         value={plans.subject}
                         onChange={handleChange}
                         required
@@ -51,13 +51,13 @@ function CreatePlan({ allPlans, setAllPlans }) {
                 </div>
 
                 <div className="hours">
-                    <label htmlFor="">Hours for study: </label>
+                    {/* <label htmlFor="">Hours for study: </label> */}
                     <input
                         type="number"
                         name="hours"
                         min={1}
                         max={4}
-                        placeholder="please enter the hours"
+                        placeholder="Enter the hours"
                         value={plans.hours}
                         onChange={handleChange}
                         required
@@ -65,7 +65,8 @@ function CreatePlan({ allPlans, setAllPlans }) {
                 </div>
 
                 <button className="btn" type="submit">
-                    Add
+                    {/* <FaPlus /> */}
+                    Add Plan
                 </button>
             </form>
         </div>

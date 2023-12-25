@@ -1,45 +1,33 @@
 import React from "react";
+import { FaCircleMinus, FaCirclePlus, FaTrash } from "react-icons/fa6";
 
-function ShowPlan({
-    allPlans,
-    setAllPlans,
-    deletePlan,
-    changeHour,
-    deleteAllPlans,
-}) {
+function ShowPlan({ allPlans, setAllPlans, deletePlan, changeHour }) {
     return (
         <div className="showPlan">
             {allPlans.map((plan, index) => (
                 <div key={index} className="plan">
-                    <div>
-                        <h3>{plan.subject}</h3>
-                    </div>
-
-                    <div>
-                        <h3>{plan.hours}</h3>
-                    </div>
+                    <h3>{plan.subject}</h3>
+                    <h3>{plan.hours}hours</h3>
 
                     <div className="buttons">
                         <button
                             className="inc"
-                            onClick={(e) => changeHour(e, plan)}>
-                            +
+                            onClick={() => changeHour("inc", plan)}>
+                            <FaCirclePlus />
                         </button>
                         <button
                             className="dec"
-                            onClick={(e) => changeHour(e, plan)}>
-                            -
+                            onClick={() => changeHour("dec", plan)}>
+                            <FaCircleMinus />
                         </button>
                         <button
                             className="delete"
                             onClick={() => deletePlan(plan)}>
-                            del
+                            <FaTrash />
                         </button>
                     </div>
                 </div>
             ))}
-
-            <button onClick={deleteAllPlans}>Delete All Plans</button>
         </div>
     );
 }
